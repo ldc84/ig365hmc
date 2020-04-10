@@ -1,0 +1,82 @@
+<!-- @@master = /template/master.html {"title":""} -->
+
+<!-- @@block = contents -->
+<div id="location">
+  <div class="sub-visual location">
+    <h2>
+      오시는 길
+      <span>365 Healing Medical Center</span>
+    </h2>
+  </div>
+  <div class="container">
+    <h3 class="title-type-1 another"><strong>365 힐링의원</strong> <br class="only-m">오시는 길</h3>
+    <div class="location-info">
+      <div class="map" id="map"></div>
+      <div class="info">
+        <ul>
+          <li>
+            <span class="icon"><img src="./images/location_icon01.png" alt=""></span>
+            <p class="tit">경기도 수원시 팔달구 인계로 53 3층</p>
+          </li>
+          <li>
+            <span class="icon"><img src="./images/location_icon02.png" alt=""></span>
+            <p class="tit">031-232-3650</p>
+          </li>
+          <li>
+            <span class="icon"><img src="./images/location_icon03.png" alt=""></span>
+            <p class="tit">031-546-8288</p>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <span class="icon"><img src="./images/location_icon04.png" alt=""></span>
+            <p class="tit">버스 이용시</p>
+            일반버스 : 8, 9-1, 98, 82-2, 2-1, 9, 300-1, 83, 20-1, 64, 25, 20, 45, 112, 25-1, 25-2, 51, 13-6, 92-1, 92, 15, 15-1, 46-1, 13-4, 88, 83-1, 63, 58, 62-1<br>
+            좌석버스 : 300번 인계동 주민센터에서 하차
+          </li>
+          <li>
+            <span class="icon"><img src="./images/location_icon05.png" alt=""></span>
+            <p class="tit">지하철 이용시</p>
+            분당선 매교역 8번 출구 도보 10분 거리
+          </li>
+          <li>
+            <span class="icon"><img src="./images/location_icon06.png" alt=""></span>
+            <p class="tit">자가용 이용시</p>
+            대형 주차장 완비
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b21d0936cebb424b025634ef5e5be781"></script>
+<script>
+  window.addEventListener('load', function(){
+    // 현재 페이지 메뉴 활성화
+    $('#gnb ul li').eq(3).addClass('active');
+
+    var latlng = new kakao.maps.LatLng(37.2694713, 127.0237446);
+
+    // 지도에 마커생성
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        mapOption = { 
+          center: latlng, // 지도의 중심좌표
+          level: 3 // 지도의 확대 레벨
+        };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+    // 마커가 표시될 위치입니다 
+    var markerPosition  = latlng; 
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+      position: markerPosition
+    });
+
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+  });
+</script>
+<!-- @@close -->
