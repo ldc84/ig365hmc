@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>인계365 힐링의원 </title>
+
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <!-- <link rel="alternate" href="http://" hreflang="ko" /> -->
+
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+
+  <!-- <link rel="icon" type="image/png" href="/favicon.png"> -->
+  <link rel="stylesheet" href="./css/style.css?t=1586484596844">
+
+</head>
+
+<body>
+
+  <!-- skip navigation -->
+  <div class="skip-nav">
+    <a href="#contents">Go To Contents</a>
+  </div>
+
+  <!-- wrap -->
+  <div id="wrap">
+    <div class="dim"></div>
+    <!-- header -->
+    <header id="header">
+      <div class="container">
+        <h1><a href="./index.html">인계365 힐링의원</a></h1>
+        <a href="" class="m-menu">
+          <span>메뉴 열림</span>
+        </a>
+      </div>
+      <nav id="gnb">
+        <div class="container">
+          <p class="m-title">인계365 힐링의원</p>
+          <ul>
+            <li><a href="./intro.html">병원소개</a></li>
+            <li><a href="./subject.html">진료안내</a></li>
+            <li><a href="./infra.html">의원시설</a></li>
+            <li><a href="./location.html">오시는 길</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- //header -->
+
+    <!-- contents -->
+    <section id="contents">
+<!-- start contents -->
+<div id="location">
+  <div class="sub-visual location">
+    <h2>
+      오시는 길
+      <span>365 Healing Medical Center</span>
+    </h2>
+  </div>
+  <div class="container">
+    <h3 class="title-type-1 another"><strong>365 힐링의원</strong> <br class="only-m">오시는 길</h3>
+    <div class="location-info">
+      <div class="map" id="map"></div>
+      <div class="info">
+        <ul>
+          <li>
+            <span class="icon"><img src="./images/location_icon01.png" alt=""></span>
+            <p class="tit">경기도 수원시 팔달구 인계로 53 3층</p>
+          </li>
+          <li>
+            <span class="icon"><img src="./images/location_icon02.png" alt=""></span>
+            <p class="tit">031-232-3650</p>
+          </li>
+          <li>
+            <span class="icon"><img src="./images/location_icon03.png" alt=""></span>
+            <p class="tit">031-546-8288</p>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <span class="icon"><img src="./images/location_icon04.png" alt=""></span>
+            <p class="tit">버스 이용시</p>
+            일반버스 : 8, 9-1, 98, 82-2, 2-1, 9, 300-1, 83, 20-1, 64, 25, 20, 45, 112, 25-1, 25-2, 51, 13-6, 92-1, 92, 15, 15-1, 46-1, 13-4, 88, 83-1, 63, 58, 62-1<br>
+            좌석버스 : 300번 인계동 주민센터에서 하차
+          </li>
+          <li>
+            <span class="icon"><img src="./images/location_icon05.png" alt=""></span>
+            <p class="tit">지하철 이용시</p>
+            분당선 매교역 8번 출구 도보 10분 거리
+          </li>
+          <li>
+            <span class="icon"><img src="./images/location_icon06.png" alt=""></span>
+            <p class="tit">자가용 이용시</p>
+            대형 주차장 완비
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b21d0936cebb424b025634ef5e5be781"></script>
+<script>
+  window.addEventListener('load', function(){
+    // 현재 페이지 메뉴 활성화
+    $('#gnb ul li').eq(3).addClass('active');
+
+    var latlng = new kakao.maps.LatLng(37.2694713, 127.0237446);
+
+    // 지도에 마커생성
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        mapOption = { 
+          center: latlng, // 지도의 중심좌표
+          level: 3 // 지도의 확대 레벨
+        };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+    // 마커가 표시될 위치입니다 
+    var markerPosition  = latlng; 
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+      position: markerPosition
+    });
+
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+  });
+</script>
+
+<!-- end contents -->
+    </section>
+    <!-- //contents -->
+
+    <!-- quick -->
+    <aside id="quick">
+      <ul>
+        <li><a href="" target="_blank" class="kakaotalk">카카오톡 상담</a></li>
+        <li><a href="tel:031-232-3650" class="tel">031-232-3650에 전화하기</a></li>
+        <li><a href="./location.html" class="location">오시는길</a></li>
+        <li><a href="#wrap" class="top">맨위로 가기</a></li>
+      </ul>
+    </aside>
+    <!-- //quick -->
+
+    <!-- mobile top -->
+    <a href="#wrap" class="top only-m m-quick">맨위로 가기</a>
+    <!-- //mobile top -->
+
+    <!-- footer -->
+    <footer id="footer" class="">
+      <div class="container">
+        <h2 class="invisible">푸터 영역</h2>
+        <span class="foot-logo">인계365 힐링의원</span>
+        <div>
+          <span>상호명 : 인계365힐링의원</span>
+          <span>대표 : 표기철</span>
+          <address>주소 : 경기도 수원시 팔달구 인계로 53 (인계동 871-5번지, 3층)</address>
+        </div>
+        <div>
+          <span>문의 : 031-232-3650</span>
+          <span>fAX : 031-546-8288</span>
+        </div>
+      </div>
+    </footer>
+    <!-- //footer -->
+
+  </div>
+  <!-- //wrap -->
+
+  <!-- jquery cdn -->
+  <script src="./js/ui_js.js?t=1586484596844"></script>
+</body>
+
+</html>
