@@ -1,4 +1,4 @@
-# 인계365 힐링의원
+# 인계365 힐링의원
 This provides an example Gulp.js project which automates CSS tasks including:
 
 * optimizing images
